@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Build & cache
+dist/
+build/
+.cache/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Database dumps berisi data asli (simpan hanya dummy/anonim)
+*.dump
+backup/*.sql
+!backup/.gitkeep
+
+# Unggahan berkas pendaftar saat development
+storage/uploads/*
+!storage/uploads/.gitkeep
