@@ -26,7 +26,7 @@ Proyek ini dikerjakan sebagai role play startup berbasis **TOGAF ADM** (Fase C�
 | F-04 | Pengumuman hasil seleksi |
 | F-05 | Ekspor data pendaftar diterima |
 
-Detail prioritas ada di [backlog MoSCoW](docs/06_Governance/backlog-moscow.md).
+Detail prioritas ada di [backlog MoSCoW](docs/06_Governance/P13_Backlog_MoSCoW_DoD_Ketelusuran.pdf).
 
 ## Struktur repo
 
@@ -39,7 +39,7 @@ Detail prioritas ada di [backlog MoSCoW](docs/06_Governance/backlog-moscow.md).
 │   ├── 03_Application/        Use case, user story, wireframe, prototipe
 │   ├── 04_Technology/         Topologi, deployment, keamanan, TCO
 │   ├── 05_Opportunities/      Gap analysis, roadmap, rencana implementasi
-│   ├── 06_Governance/         Backlog, DoD, WBS, Gantt, RACI, risiko, ADR, log CR
+│   ├── 06_Governance/         Backlog, DoD, WBS, Gantt, RACI, risiko, ADR, log CR, ProjectLibre, RAB
 │   ├── 07_Evidence/           Notulen stand-up, bukti mitra, UAT, SUS
 │   └── 09_Pitch/              Pitch deck final
 ├── src/                       Kode aplikasi (08_Source = repo ini: tag v1.0, changelog)

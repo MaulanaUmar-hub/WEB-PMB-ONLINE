@@ -43,7 +43,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2026-11-19T22:17:00</CurrentDate>
+    <CurrentDate>2026-11-21T13:57:00</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -4915,7 +4915,7 @@
             <Finish>2026-12-11T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
-            <StandardRate>100000</StandardRate>
+            <StandardRate>90000</StandardRate>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
             <CalendarUID>15</CalendarUID>
@@ -4942,7 +4942,7 @@
             <Finish>2026-12-11T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
-            <StandardRate>85000</StandardRate>
+            <StandardRate>22000</StandardRate>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
             <CalendarUID>16</CalendarUID>
@@ -4969,7 +4969,7 @@
             <Finish>2026-12-11T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
-            <StandardRate>85000</StandardRate>
+            <StandardRate>22000</StandardRate>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
             <CalendarUID>17</CalendarUID>
@@ -5046,6 +5046,8 @@
             <MaxUnits>1</MaxUnits>
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
+            <Start>2026-12-02T08:00:00</Start>
+            <Finish>2026-12-02T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
             <StandardRate>35000</StandardRate>
@@ -5070,6 +5072,8 @@
             <MaxUnits>1</MaxUnits>
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
+            <Start>2026-12-02T08:00:00</Start>
+            <Finish>2026-12-02T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
             <StandardRate>25000</StandardRate>
@@ -5085,18 +5089,20 @@
         <Resource>
             <UID>8</UID>
             <ID>8</ID>
-            <Name>Langganan claude pro untuk otomasi</Name>
+            <Name>UAT dengan 3 Pengguna Proksi</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <Initials>claude</Initials>
+            <Initials>UAT</Initials>
             <Group></Group>
             <EmailAddress></EmailAddress>
             <MaxUnits>1</MaxUnits>
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
+            <Start>2026-11-27T08:00:00</Start>
+            <Finish>2026-12-01T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
-            <StandardRate>300000</StandardRate>
+            <StandardRate>45000</StandardRate>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
             <CalendarUID>22</CalendarUID>
@@ -5109,30 +5115,6 @@
         <Resource>
             <UID>9</UID>
             <ID>9</ID>
-            <Name>UAT dengan 3 Pengguna Proksi</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <Initials>UAT</Initials>
-            <Group></Group>
-            <EmailAddress></EmailAddress>
-            <MaxUnits>1</MaxUnits>
-            <PeakUnits>1</PeakUnits>
-            <OverAllocated>0</OverAllocated>
-            <CanLevel>0</CanLevel>
-            <AccrueAt>3</AccrueAt>
-            <StandardRate>45000</StandardRate>
-            <StandardRateFormat>3</StandardRateFormat>
-            <OvertimeRateFormat>3</OvertimeRateFormat>
-            <CalendarUID>23</CalendarUID>
-            <IsGeneric>0</IsGeneric>
-            <IsInactive>0</IsInactive>
-            <IsEnterprise>0</IsEnterprise>
-            <IsBudget>0</IsBudget>
-            <AvailabilityPeriods/>
-        </Resource>
-        <Resource>
-            <UID>10</UID>
-            <ID>10</ID>
             <Name>Print Skenario UAT</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
@@ -5142,12 +5124,14 @@
             <MaxUnits>1</MaxUnits>
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
+            <Start>2026-11-27T08:00:00</Start>
+            <Finish>2026-12-01T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <AccrueAt>3</AccrueAt>
             <StandardRate>5000</StandardRate>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
-            <CalendarUID>24</CalendarUID>
+            <CalendarUID>23</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -6653,48 +6637,54 @@
         </Assignment>
         <Assignment>
             <UID>52</UID>
-            <TaskUID>41</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2026-11-30T17:00:00</Finish>
+            <TaskUID>40</TaskUID>
+            <ResourceUID>8</ResourceUID>
+            <Finish>2026-12-01T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2026-11-27T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-11-27T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT8H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>52</UID>
-                <Start>2026-11-27T08:00:00</Start>
-                <Finish>2026-11-28T08:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>52</UID>
-                <Start>2026-11-30T08:00:00</Start>
-                <Finish>2026-12-01T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>53</UID>
-            <TaskUID>42</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2026-11-30T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-27T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
             <Resume>2026-11-27T08:00:00</Resume>
             <Units>1</Units>
-            <Work>PT16H0M0S</Work>
+            <Work>PT1H40M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>52</UID>
+                <Start>2026-11-27T08:00:00</Start>
+                <Finish>2026-11-28T08:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT0H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>52</UID>
+                <Start>2026-11-30T08:00:00</Start>
+                <Finish>2026-12-01T08:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT0H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>52</UID>
+                <Start>2026-12-01T08:00:00</Start>
+                <Finish>2026-12-02T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT0H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>53</UID>
+            <TaskUID>40</TaskUID>
+            <ResourceUID>9</ResourceUID>
+            <Finish>2026-12-01T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <Start>2026-11-27T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-11-27T08:00:00</Resume>
+            <Units>1</Units>
+            <Work>PT1H40M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
@@ -6702,20 +6692,28 @@
                 <Start>2026-11-27T08:00:00</Start>
                 <Finish>2026-11-28T08:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT8H0M0S</Value>
+                <Value>PT0H0M0S</Value>
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>53</UID>
                 <Start>2026-11-30T08:00:00</Start>
-                <Finish>2026-12-01T01:00:00</Finish>
+                <Finish>2026-12-01T08:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT8H0M0S</Value>
+                <Value>PT0H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>53</UID>
+                <Start>2026-12-01T08:00:00</Start>
+                <Finish>2026-12-02T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT0H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>54</UID>
-            <TaskUID>42</TaskUID>
+            <TaskUID>41</TaskUID>
             <ResourceUID>3</ResourceUID>
             <Finish>2026-11-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
@@ -6746,6 +6744,68 @@
         </Assignment>
         <Assignment>
             <UID>55</UID>
+            <TaskUID>42</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2026-11-30T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2026-11-27T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-11-27T08:00:00</Resume>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>55</UID>
+                <Start>2026-11-27T08:00:00</Start>
+                <Finish>2026-11-28T08:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT8H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>55</UID>
+                <Start>2026-11-30T08:00:00</Start>
+                <Finish>2026-12-01T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT8H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>56</UID>
+            <TaskUID>42</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2026-11-30T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2026-11-27T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-11-27T08:00:00</Resume>
+            <Units>0.5</Units>
+            <Work>PT8H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>56</UID>
+                <Start>2026-11-27T08:00:00</Start>
+                <Finish>2026-11-28T08:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>56</UID>
+                <Start>2026-11-30T08:00:00</Start>
+                <Finish>2026-12-01T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>57</UID>
             <TaskUID>43</TaskUID>
             <ResourceUID>4</ResourceUID>
             <Finish>2026-12-01T17:00:00</Finish>
@@ -6760,7 +6820,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>55</UID>
+                <UID>57</UID>
                 <Start>2026-12-01T08:00:00</Start>
                 <Finish>2026-12-02T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6768,7 +6828,7 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>56</UID>
+            <UID>58</UID>
             <TaskUID>44</TaskUID>
             <ResourceUID>4</ResourceUID>
             <Finish>2026-12-02T17:00:00</Finish>
@@ -6783,7 +6843,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>56</UID>
+                <UID>58</UID>
                 <Start>2026-12-02T08:00:00</Start>
                 <Finish>2026-12-03T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6791,7 +6851,7 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>57</UID>
+            <UID>59</UID>
             <TaskUID>44</TaskUID>
             <ResourceUID>3</ResourceUID>
             <Finish>2026-12-02T17:00:00</Finish>
@@ -6806,7 +6866,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>57</UID>
+                <UID>59</UID>
                 <Start>2026-12-02T08:00:00</Start>
                 <Finish>2026-12-03T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6814,7 +6874,7 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>58</UID>
+            <UID>60</UID>
             <TaskUID>45</TaskUID>
             <ResourceUID>5</ResourceUID>
             <Finish>2026-11-30T17:00:00</Finish>
@@ -6829,7 +6889,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>58</UID>
+                <UID>60</UID>
                 <Start>2026-11-27T08:00:00</Start>
                 <Finish>2026-11-28T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -6837,7 +6897,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>58</UID>
+                <UID>60</UID>
                 <Start>2026-11-30T08:00:00</Start>
                 <Finish>2026-12-01T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6845,7 +6905,7 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>59</UID>
+            <UID>61</UID>
             <TaskUID>46</TaskUID>
             <ResourceUID>5</ResourceUID>
             <Finish>2026-12-02T17:00:00</Finish>
@@ -6860,7 +6920,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>59</UID>
+                <UID>61</UID>
                 <Start>2026-12-02T08:00:00</Start>
                 <Finish>2026-12-03T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6868,7 +6928,51 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>60</UID>
+            <UID>62</UID>
+            <TaskUID>46</TaskUID>
+            <ResourceUID>6</ResourceUID>
+            <Finish>2026-12-02T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <Start>2026-12-02T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-02T08:00:00</Resume>
+            <Units>1</Units>
+            <Work>PT1H40M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>62</UID>
+                <Start>2026-12-02T08:00:00</Start>
+                <Finish>2026-12-03T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT0H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>63</UID>
+            <TaskUID>46</TaskUID>
+            <ResourceUID>7</ResourceUID>
+            <Finish>2026-12-02T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <Start>2026-12-02T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-02T08:00:00</Resume>
+            <Units>1</Units>
+            <Work>PT1H40M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>63</UID>
+                <Start>2026-12-02T08:00:00</Start>
+                <Finish>2026-12-03T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT0H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>64</UID>
             <TaskUID>47</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-02T17:00:00</Finish>
@@ -6881,7 +6985,7 @@
             <WorkContour>0</WorkContour>
         </Assignment>
         <Assignment>
-            <UID>61</UID>
+            <UID>65</UID>
             <TaskUID>48</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-09T17:00:00</Finish>
@@ -6896,7 +7000,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>61</UID>
+                <UID>65</UID>
                 <Start>2026-12-03T08:00:00</Start>
                 <Finish>2026-12-04T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -6904,7 +7008,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>61</UID>
+                <UID>65</UID>
                 <Start>2026-12-04T08:00:00</Start>
                 <Finish>2026-12-05T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -6912,7 +7016,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>61</UID>
+                <UID>65</UID>
                 <Start>2026-12-07T08:00:00</Start>
                 <Finish>2026-12-08T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -6920,7 +7024,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>61</UID>
+                <UID>65</UID>
                 <Start>2026-12-08T08:00:00</Start>
                 <Finish>2026-12-09T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -6928,7 +7032,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>61</UID>
+                <UID>65</UID>
                 <Start>2026-12-09T08:00:00</Start>
                 <Finish>2026-12-10T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6936,7 +7040,7 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>62</UID>
+            <UID>66</UID>
             <TaskUID>49</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
@@ -6951,7 +7055,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>62</UID>
+                <UID>66</UID>
                 <Start>2026-12-03T08:00:00</Start>
                 <Finish>2026-12-04T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -6959,100 +7063,8 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>63</UID>
-            <TaskUID>50</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2026-12-03T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-03T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-03T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>63</UID>
-                <Start>2026-12-03T08:00:00</Start>
-                <Finish>2026-12-04T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>64</UID>
-            <TaskUID>50</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2026-12-03T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-03T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-03T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>64</UID>
-                <Start>2026-12-03T08:00:00</Start>
-                <Finish>2026-12-04T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>65</UID>
-            <TaskUID>51</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2026-12-03T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-03T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-03T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>65</UID>
-                <Start>2026-12-03T08:00:00</Start>
-                <Finish>2026-12-04T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>66</UID>
-            <TaskUID>51</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2026-12-03T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-03T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-03T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>66</UID>
-                <Start>2026-12-03T08:00:00</Start>
-                <Finish>2026-12-04T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
             <UID>67</UID>
-            <TaskUID>51</TaskUID>
+            <TaskUID>50</TaskUID>
             <ResourceUID>3</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
@@ -7075,8 +7087,8 @@
         </Assignment>
         <Assignment>
             <UID>68</UID>
-            <TaskUID>52</TaskUID>
-            <ResourceUID>1</ResourceUID>
+            <TaskUID>50</TaskUID>
+            <ResourceUID>5</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7098,17 +7110,17 @@
         </Assignment>
         <Assignment>
             <UID>69</UID>
-            <TaskUID>53</TaskUID>
-            <ResourceUID>1</ResourceUID>
+            <TaskUID>51</TaskUID>
+            <ResourceUID>2</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
+            <RemainingWork>PT4H0M0S</RemainingWork>
             <Start>2026-12-03T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
             <Resume>2026-12-03T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
@@ -7116,12 +7128,12 @@
                 <Start>2026-12-03T08:00:00</Start>
                 <Finish>2026-12-04T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
+                <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>70</UID>
-            <TaskUID>54</TaskUID>
+            <TaskUID>51</TaskUID>
             <ResourceUID>1</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
@@ -7144,8 +7156,8 @@
         </Assignment>
         <Assignment>
             <UID>71</UID>
-            <TaskUID>54</TaskUID>
-            <ResourceUID>2</ResourceUID>
+            <TaskUID>51</TaskUID>
+            <ResourceUID>3</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7167,8 +7179,8 @@
         </Assignment>
         <Assignment>
             <UID>72</UID>
-            <TaskUID>54</TaskUID>
-            <ResourceUID>3</ResourceUID>
+            <TaskUID>52</TaskUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7190,8 +7202,8 @@
         </Assignment>
         <Assignment>
             <UID>73</UID>
-            <TaskUID>54</TaskUID>
-            <ResourceUID>4</ResourceUID>
+            <TaskUID>53</TaskUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7214,7 +7226,7 @@
         <Assignment>
             <UID>74</UID>
             <TaskUID>54</TaskUID>
-            <ResourceUID>5</ResourceUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7236,6 +7248,98 @@
         </Assignment>
         <Assignment>
             <UID>75</UID>
+            <TaskUID>54</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2026-12-03T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-03T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-03T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>75</UID>
+                <Start>2026-12-03T08:00:00</Start>
+                <Finish>2026-12-04T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>76</UID>
+            <TaskUID>54</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2026-12-03T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-03T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-03T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>76</UID>
+                <Start>2026-12-03T08:00:00</Start>
+                <Finish>2026-12-04T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>77</UID>
+            <TaskUID>54</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2026-12-03T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-03T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-03T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>77</UID>
+                <Start>2026-12-03T08:00:00</Start>
+                <Finish>2026-12-04T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>78</UID>
+            <TaskUID>54</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2026-12-03T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-03T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-03T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>78</UID>
+                <Start>2026-12-03T08:00:00</Start>
+                <Finish>2026-12-04T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>79</UID>
             <TaskUID>55</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-03T17:00:00</Finish>
@@ -7248,7 +7352,7 @@
             <WorkContour>0</WorkContour>
         </Assignment>
         <Assignment>
-            <UID>76</UID>
+            <UID>80</UID>
             <TaskUID>56</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-09T17:00:00</Finish>
@@ -7263,7 +7367,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>76</UID>
+                <UID>80</UID>
                 <Start>2026-12-04T08:00:00</Start>
                 <Finish>2026-12-05T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -7271,7 +7375,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>76</UID>
+                <UID>80</UID>
                 <Start>2026-12-07T08:00:00</Start>
                 <Finish>2026-12-08T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -7279,7 +7383,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>76</UID>
+                <UID>80</UID>
                 <Start>2026-12-08T08:00:00</Start>
                 <Finish>2026-12-09T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -7287,7 +7391,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>76</UID>
+                <UID>80</UID>
                 <Start>2026-12-09T08:00:00</Start>
                 <Finish>2026-12-10T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -7295,125 +7399,9 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>77</UID>
+            <UID>81</UID>
             <TaskUID>57</TaskUID>
             <ResourceUID>4</ResourceUID>
-            <Finish>2026-12-07T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2026-12-04T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-04T08:00:00</Resume>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>77</UID>
-                <Start>2026-12-04T08:00:00</Start>
-                <Finish>2026-12-05T08:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT8H0M0S</Value>
-            </TimephasedData>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>77</UID>
-                <Start>2026-12-07T08:00:00</Start>
-                <Finish>2026-12-08T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT8H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>78</UID>
-            <TaskUID>57</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2026-12-07T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2026-12-04T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-04T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT8H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>78</UID>
-                <Start>2026-12-04T08:00:00</Start>
-                <Finish>2026-12-05T08:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>78</UID>
-                <Start>2026-12-07T08:00:00</Start>
-                <Finish>2026-12-08T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>79</UID>
-            <TaskUID>58</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2026-12-07T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2026-12-04T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-04T08:00:00</Resume>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>79</UID>
-                <Start>2026-12-04T08:00:00</Start>
-                <Finish>2026-12-05T08:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT8H0M0S</Value>
-            </TimephasedData>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>79</UID>
-                <Start>2026-12-07T08:00:00</Start>
-                <Finish>2026-12-08T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT8H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>80</UID>
-            <TaskUID>59</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2026-12-04T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-04T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-04T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>80</UID>
-                <Start>2026-12-04T08:00:00</Start>
-                <Finish>2026-12-05T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>81</UID>
-            <TaskUID>60</TaskUID>
-            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7443,100 +7431,124 @@
         </Assignment>
         <Assignment>
             <UID>82</UID>
-            <TaskUID>61</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2026-12-08T17:00:00</Finish>
+            <TaskUID>57</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2026-12-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-08T08:00:00</Start>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2026-12-04T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-08T08:00:00</Resume>
+            <Resume>2026-12-04T08:00:00</Resume>
             <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
+            <Work>PT8H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>82</UID>
-                <Start>2026-12-08T08:00:00</Start>
-                <Finish>2026-12-09T01:00:00</Finish>
+                <Start>2026-12-04T08:00:00</Start>
+                <Finish>2026-12-05T08:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>82</UID>
+                <Start>2026-12-07T08:00:00</Start>
+                <Finish>2026-12-08T01:00:00</Finish>
                 <Unit>3</Unit>
                 <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>83</UID>
-            <TaskUID>61</TaskUID>
+            <TaskUID>58</TaskUID>
             <ResourceUID>2</ResourceUID>
-            <Finish>2026-12-08T17:00:00</Finish>
+            <Finish>2026-12-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-08T08:00:00</Start>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2026-12-04T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-08T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
+            <Resume>2026-12-04T08:00:00</Resume>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>83</UID>
-                <Start>2026-12-08T08:00:00</Start>
-                <Finish>2026-12-09T01:00:00</Finish>
+                <Start>2026-12-04T08:00:00</Start>
+                <Finish>2026-12-05T08:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
+                <Value>PT8H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>83</UID>
+                <Start>2026-12-07T08:00:00</Start>
+                <Finish>2026-12-08T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT8H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>84</UID>
-            <TaskUID>62</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2026-12-08T17:00:00</Finish>
+            <TaskUID>59</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2026-12-04T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-08T08:00:00</Start>
+            <Start>2026-12-04T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-08T08:00:00</Resume>
+            <Resume>2026-12-04T08:00:00</Resume>
             <Units>0.5</Units>
             <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>84</UID>
-                <Start>2026-12-08T08:00:00</Start>
-                <Finish>2026-12-09T01:00:00</Finish>
+                <Start>2026-12-04T08:00:00</Start>
+                <Finish>2026-12-05T01:00:00</Finish>
                 <Unit>3</Unit>
                 <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>85</UID>
-            <TaskUID>62</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2026-12-08T17:00:00</Finish>
+            <TaskUID>60</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2026-12-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-08T08:00:00</Start>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2026-12-04T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-08T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
+            <Resume>2026-12-04T08:00:00</Resume>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>85</UID>
-                <Start>2026-12-08T08:00:00</Start>
-                <Finish>2026-12-09T01:00:00</Finish>
+                <Start>2026-12-04T08:00:00</Start>
+                <Finish>2026-12-05T08:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
+                <Value>PT8H0M0S</Value>
+            </TimephasedData>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>85</UID>
+                <Start>2026-12-07T08:00:00</Start>
+                <Finish>2026-12-08T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT8H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>86</UID>
-            <TaskUID>63</TaskUID>
-            <ResourceUID>1</ResourceUID>
+            <TaskUID>61</TaskUID>
+            <ResourceUID>4</ResourceUID>
             <Finish>2026-12-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7558,92 +7570,92 @@
         </Assignment>
         <Assignment>
             <UID>87</UID>
-            <TaskUID>64</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2026-12-09T17:00:00</Finish>
+            <TaskUID>61</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2026-12-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-09T08:00:00</Start>
+            <Start>2026-12-08T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-09T08:00:00</Resume>
+            <Resume>2026-12-08T08:00:00</Resume>
             <Units>0.5</Units>
             <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>87</UID>
-                <Start>2026-12-09T08:00:00</Start>
-                <Finish>2026-12-10T01:00:00</Finish>
+                <Start>2026-12-08T08:00:00</Start>
+                <Finish>2026-12-09T01:00:00</Finish>
                 <Unit>3</Unit>
                 <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>88</UID>
-            <TaskUID>64</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2026-12-09T17:00:00</Finish>
+            <TaskUID>62</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2026-12-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-09T08:00:00</Start>
+            <Start>2026-12-08T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-09T08:00:00</Resume>
+            <Resume>2026-12-08T08:00:00</Resume>
             <Units>0.5</Units>
             <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>88</UID>
-                <Start>2026-12-09T08:00:00</Start>
-                <Finish>2026-12-10T01:00:00</Finish>
+                <Start>2026-12-08T08:00:00</Start>
+                <Finish>2026-12-09T01:00:00</Finish>
                 <Unit>3</Unit>
                 <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>89</UID>
-            <TaskUID>64</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2026-12-09T17:00:00</Finish>
+            <TaskUID>62</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2026-12-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-09T08:00:00</Start>
+            <Start>2026-12-08T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-09T08:00:00</Resume>
+            <Resume>2026-12-08T08:00:00</Resume>
             <Units>0.5</Units>
             <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>89</UID>
-                <Start>2026-12-09T08:00:00</Start>
-                <Finish>2026-12-10T01:00:00</Finish>
+                <Start>2026-12-08T08:00:00</Start>
+                <Finish>2026-12-09T01:00:00</Finish>
                 <Unit>3</Unit>
                 <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>90</UID>
-            <TaskUID>64</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2026-12-09T17:00:00</Finish>
+            <TaskUID>63</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2026-12-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-09T08:00:00</Start>
+            <Start>2026-12-08T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-09T08:00:00</Resume>
+            <Resume>2026-12-08T08:00:00</Resume>
             <Units>0.5</Units>
             <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>90</UID>
-                <Start>2026-12-09T08:00:00</Start>
-                <Finish>2026-12-10T01:00:00</Finish>
+                <Start>2026-12-08T08:00:00</Start>
+                <Finish>2026-12-09T01:00:00</Finish>
                 <Unit>3</Unit>
                 <Value>PT4H0M0S</Value>
             </TimephasedData>
@@ -7651,7 +7663,7 @@
         <Assignment>
             <UID>91</UID>
             <TaskUID>64</TaskUID>
-            <ResourceUID>5</ResourceUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-09T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7673,8 +7685,8 @@
         </Assignment>
         <Assignment>
             <UID>92</UID>
-            <TaskUID>65</TaskUID>
-            <ResourceUID>1</ResourceUID>
+            <TaskUID>64</TaskUID>
+            <ResourceUID>2</ResourceUID>
             <Finish>2026-12-09T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7696,6 +7708,98 @@
         </Assignment>
         <Assignment>
             <UID>93</UID>
+            <TaskUID>64</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2026-12-09T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT4H0M0S</RemainingWork>
+            <Start>2026-12-09T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-09T08:00:00</Resume>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>93</UID>
+                <Start>2026-12-09T08:00:00</Start>
+                <Finish>2026-12-10T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>94</UID>
+            <TaskUID>64</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2026-12-09T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT4H0M0S</RemainingWork>
+            <Start>2026-12-09T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-09T08:00:00</Resume>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>94</UID>
+                <Start>2026-12-09T08:00:00</Start>
+                <Finish>2026-12-10T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>95</UID>
+            <TaskUID>64</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2026-12-09T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT4H0M0S</RemainingWork>
+            <Start>2026-12-09T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-09T08:00:00</Resume>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>95</UID>
+                <Start>2026-12-09T08:00:00</Start>
+                <Finish>2026-12-10T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>96</UID>
+            <TaskUID>65</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2026-12-09T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT4H0M0S</RemainingWork>
+            <Start>2026-12-09T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-09T08:00:00</Resume>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>96</UID>
+                <Start>2026-12-09T08:00:00</Start>
+                <Finish>2026-12-10T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT4H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>97</UID>
             <TaskUID>65</TaskUID>
             <ResourceUID>5</ResourceUID>
             <Finish>2026-12-09T17:00:00</Finish>
@@ -7710,7 +7814,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>93</UID>
+                <UID>97</UID>
                 <Start>2026-12-09T08:00:00</Start>
                 <Finish>2026-12-10T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -7718,7 +7822,7 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>94</UID>
+            <UID>98</UID>
             <TaskUID>66</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-09T17:00:00</Finish>
@@ -7731,7 +7835,7 @@
             <WorkContour>0</WorkContour>
         </Assignment>
         <Assignment>
-            <UID>95</UID>
+            <UID>99</UID>
             <TaskUID>67</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-11T17:00:00</Finish>
@@ -7746,7 +7850,7 @@
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>95</UID>
+                <UID>99</UID>
                 <Start>2026-12-10T08:00:00</Start>
                 <Finish>2026-12-11T08:00:00</Finish>
                 <Unit>3</Unit>
@@ -7754,7 +7858,7 @@
             </TimephasedData>
             <TimephasedData>
                 <Type>1</Type>
-                <UID>95</UID>
+                <UID>99</UID>
                 <Start>2026-12-11T08:00:00</Start>
                 <Finish>2026-12-12T01:00:00</Finish>
                 <Unit>3</Unit>
@@ -7762,101 +7866,9 @@
             </TimephasedData>
         </Assignment>
         <Assignment>
-            <UID>96</UID>
-            <TaskUID>68</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2026-12-10T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-10T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>96</UID>
-                <Start>2026-12-10T08:00:00</Start>
-                <Finish>2026-12-11T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>97</UID>
-            <TaskUID>68</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2026-12-10T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-10T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>97</UID>
-                <Start>2026-12-10T08:00:00</Start>
-                <Finish>2026-12-11T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>98</UID>
-            <TaskUID>68</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2026-12-10T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-10T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>98</UID>
-                <Start>2026-12-10T08:00:00</Start>
-                <Finish>2026-12-11T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
-            <UID>99</UID>
-            <TaskUID>68</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2026-12-10T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT4H0M0S</RemainingWork>
-            <Start>2026-12-10T08:00:00</Start>
-            <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.5</Units>
-            <Work>PT4H0M0S</Work>
-            <WorkContour>0</WorkContour>
-            <TimephasedData>
-                <Type>1</Type>
-                <UID>99</UID>
-                <Start>2026-12-10T08:00:00</Start>
-                <Finish>2026-12-11T01:00:00</Finish>
-                <Unit>3</Unit>
-                <Value>PT4H0M0S</Value>
-            </TimephasedData>
-        </Assignment>
-        <Assignment>
             <UID>100</UID>
             <TaskUID>68</TaskUID>
-            <ResourceUID>5</ResourceUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7878,17 +7890,17 @@
         </Assignment>
         <Assignment>
             <UID>101</UID>
-            <TaskUID>69</TaskUID>
-            <ResourceUID>1</ResourceUID>
+            <TaskUID>68</TaskUID>
+            <ResourceUID>2</ResourceUID>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT1H0M0S</RemainingWork>
+            <RemainingWork>PT4H0M0S</RemainingWork>
             <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
             <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.125</Units>
-            <Work>PT1H0M0S</Work>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
@@ -7896,22 +7908,22 @@
                 <Start>2026-12-10T08:00:00</Start>
                 <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT1H0M0S</Value>
+                <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>102</UID>
-            <TaskUID>69</TaskUID>
-            <ResourceUID>2</ResourceUID>
+            <TaskUID>68</TaskUID>
+            <ResourceUID>3</ResourceUID>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT1H0M0S</RemainingWork>
+            <RemainingWork>PT4H0M0S</RemainingWork>
             <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
             <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.125</Units>
-            <Work>PT1H0M0S</Work>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
@@ -7919,22 +7931,22 @@
                 <Start>2026-12-10T08:00:00</Start>
                 <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT1H0M0S</Value>
+                <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>103</UID>
-            <TaskUID>69</TaskUID>
-            <ResourceUID>3</ResourceUID>
+            <TaskUID>68</TaskUID>
+            <ResourceUID>4</ResourceUID>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT1H0M0S</RemainingWork>
+            <RemainingWork>PT4H0M0S</RemainingWork>
             <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
             <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.125</Units>
-            <Work>PT1H0M0S</Work>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
@@ -7942,22 +7954,22 @@
                 <Start>2026-12-10T08:00:00</Start>
                 <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT1H0M0S</Value>
+                <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>104</UID>
-            <TaskUID>69</TaskUID>
-            <ResourceUID>4</ResourceUID>
+            <TaskUID>68</TaskUID>
+            <ResourceUID>5</ResourceUID>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT1H0M0S</RemainingWork>
+            <RemainingWork>PT4H0M0S</RemainingWork>
             <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
             <Resume>2026-12-10T08:00:00</Resume>
-            <Units>0.125</Units>
-            <Work>PT1H0M0S</Work>
+            <Units>0.5</Units>
+            <Work>PT4H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
@@ -7965,13 +7977,13 @@
                 <Start>2026-12-10T08:00:00</Start>
                 <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT1H0M0S</Value>
+                <Value>PT4H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>105</UID>
             <TaskUID>69</TaskUID>
-            <ResourceUID>5</ResourceUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -7993,100 +8005,100 @@
         </Assignment>
         <Assignment>
             <UID>106</UID>
-            <TaskUID>70</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2026-12-11T17:00:00</Finish>
+            <TaskUID>69</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-11T08:00:00</Start>
+            <RemainingWork>PT1H0M0S</RemainingWork>
+            <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-11T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
+            <Resume>2026-12-10T08:00:00</Resume>
+            <Units>0.125</Units>
+            <Work>PT1H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>106</UID>
-                <Start>2026-12-11T08:00:00</Start>
-                <Finish>2026-12-12T01:00:00</Finish>
+                <Start>2026-12-10T08:00:00</Start>
+                <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
+                <Value>PT1H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>107</UID>
-            <TaskUID>70</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2026-12-11T17:00:00</Finish>
+            <TaskUID>69</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-11T08:00:00</Start>
+            <RemainingWork>PT1H0M0S</RemainingWork>
+            <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-11T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
+            <Resume>2026-12-10T08:00:00</Resume>
+            <Units>0.125</Units>
+            <Work>PT1H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>107</UID>
-                <Start>2026-12-11T08:00:00</Start>
-                <Finish>2026-12-12T01:00:00</Finish>
+                <Start>2026-12-10T08:00:00</Start>
+                <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
+                <Value>PT1H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>108</UID>
-            <TaskUID>70</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2026-12-11T17:00:00</Finish>
+            <TaskUID>69</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-11T08:00:00</Start>
+            <RemainingWork>PT1H0M0S</RemainingWork>
+            <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-11T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
+            <Resume>2026-12-10T08:00:00</Resume>
+            <Units>0.125</Units>
+            <Work>PT1H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>108</UID>
-                <Start>2026-12-11T08:00:00</Start>
-                <Finish>2026-12-12T01:00:00</Finish>
+                <Start>2026-12-10T08:00:00</Start>
+                <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
+                <Value>PT1H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>109</UID>
-            <TaskUID>70</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2026-12-11T17:00:00</Finish>
+            <TaskUID>69</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
-            <RemainingWork>PT2H0M0S</RemainingWork>
-            <Start>2026-12-11T08:00:00</Start>
+            <RemainingWork>PT1H0M0S</RemainingWork>
+            <Start>2026-12-10T08:00:00</Start>
             <Stop>1970-01-01T07:00:00</Stop>
-            <Resume>2026-12-11T08:00:00</Resume>
-            <Units>0.25</Units>
-            <Work>PT2H0M0S</Work>
+            <Resume>2026-12-10T08:00:00</Resume>
+            <Units>0.125</Units>
+            <Work>PT1H0M0S</Work>
             <WorkContour>0</WorkContour>
             <TimephasedData>
                 <Type>1</Type>
                 <UID>109</UID>
-                <Start>2026-12-11T08:00:00</Start>
-                <Finish>2026-12-12T01:00:00</Finish>
+                <Start>2026-12-10T08:00:00</Start>
+                <Finish>2026-12-11T01:00:00</Finish>
                 <Unit>3</Unit>
-                <Value>PT2H0M0S</Value>
+                <Value>PT1H0M0S</Value>
             </TimephasedData>
         </Assignment>
         <Assignment>
             <UID>110</UID>
             <TaskUID>70</TaskUID>
-            <ResourceUID>5</ResourceUID>
+            <ResourceUID>1</ResourceUID>
             <Finish>2026-12-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
@@ -8108,6 +8120,98 @@
         </Assignment>
         <Assignment>
             <UID>111</UID>
+            <TaskUID>70</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2026-12-11T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-11T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-11T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>111</UID>
+                <Start>2026-12-11T08:00:00</Start>
+                <Finish>2026-12-12T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>112</UID>
+            <TaskUID>70</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2026-12-11T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-11T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-11T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>112</UID>
+                <Start>2026-12-11T08:00:00</Start>
+                <Finish>2026-12-12T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>113</UID>
+            <TaskUID>70</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2026-12-11T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-11T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-11T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>113</UID>
+                <Start>2026-12-11T08:00:00</Start>
+                <Finish>2026-12-12T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>114</UID>
+            <TaskUID>70</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2026-12-11T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <RemainingWork>PT2H0M0S</RemainingWork>
+            <Start>2026-12-11T08:00:00</Start>
+            <Stop>1970-01-01T07:00:00</Stop>
+            <Resume>2026-12-11T08:00:00</Resume>
+            <Units>0.25</Units>
+            <Work>PT2H0M0S</Work>
+            <WorkContour>0</WorkContour>
+            <TimephasedData>
+                <Type>1</Type>
+                <UID>114</UID>
+                <Start>2026-12-11T08:00:00</Start>
+                <Finish>2026-12-12T01:00:00</Finish>
+                <Unit>3</Unit>
+                <Value>PT2H0M0S</Value>
+            </TimephasedData>
+        </Assignment>
+        <Assignment>
+            <UID>115</UID>
             <TaskUID>71</TaskUID>
             <ResourceUID>-65535</ResourceUID>
             <Finish>2026-12-11T17:00:00</Finish>

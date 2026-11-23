@@ -14,4 +14,4 @@
 - P14: ≥ 15 test case black-box; cek UI implementasi vs prototipe
 - P15: skenario UAT, kuesioner SUS 10 butir, laporan UAT, panduan pengguna
 
-Perbarui [matriks ketelusuran](../06_Governance/traceability-matrix.md) setiap ada use case atau layar baru.
+Perbarui [matriks ketelusuran](../06_Governance/Traceability_Matrix_PMB_Online_UNH_v1.1.xlsx) setiap ada use case atau layar baru.

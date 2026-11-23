@@ -27,3 +27,8 @@ backup/*.sql
 # Unggahan berkas pendaftar saat development
 storage/uploads/*
 !storage/uploads/.gitkeep
+
+# Bukan bagian proyek
+taste-skill/
+_to_delete/
+~$*
