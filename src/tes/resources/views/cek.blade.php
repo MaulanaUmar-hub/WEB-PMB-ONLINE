@@ -1,3 +1,5 @@
 <div>
-    <!-- Simplicity is the essence of happiness. - Cedric Bledsoe -->
+mohon masukan nomor peserta <br>
+<input type="text">
+<a href="lulus"><button>Submit</button></a>
 </div>
