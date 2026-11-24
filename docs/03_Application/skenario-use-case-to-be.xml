@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Spesifikasi skenario Web PMB Online UNH. Sumber: dokumen TOGAF Fase B sampai F Kelompok 2 (2026).
+     Atribut sumber="usulan" menandai langkah yang belum tertulis di dokumen dan perlu dikonfirmasi. -->
+<spesifikasi proyek="Web PMB Online UNH" versi="1.1" mulai="Skenario Use Case To-Be">
+  <pengantar>
+    <kode-use-case>
+      <kelompok aktor="Calon Mahasiswa" rentang="UC1-UC8"/>
+      <kode id="UC9" nama="Memverifikasi berkas"/>
+      <kode id="UC10" nama="Menilai dan menetapkan kelulusan"/>
+      <kode id="UC11" nama="Mengirim notifikasi"/>
+      <kode id="UC12" nama="Membuat tagihan dan VA"/>
+      <kode id="UC13" nama="Memverifikasi pembayaran otomatis"/>
+      <kode id="UC14" nama="Mengirim data dan menerbitkan NIM"/>
+      <kode id="UC15" nama="Memvalidasi data mahasiswa baru"/>
+      <kode id="UC16" nama="Dashboard"/>
+    </kode-use-case>
+  </pengantar>
+
+
+  <!-- ===================== SKENARIO USE CASE TO-BE ===================== -->
+  <skenario-use-case proses="to-be">
+
+    <use-case id="UC1" nama="Membuat akun">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <prakondisi>Calon belum memiliki akun dan memiliki email aktif.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Calon membuka portal pmb.unh.ac.id.</langkah>
+        <langkah no="2">Calon mengisi nama, email, nomor HP, dan kata sandi.</langkah>
+        <langkah no="3">Sistem membuat akun berstatus belum terverifikasi dan mengirim kode OTP ke email.</langkah>
+        <langkah no="4">Calon memasukkan kode OTP.</langkah>
+        <langkah no="5">Sistem mengaktifkan akun.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Email sudah terdaftar: sistem menolak dengan kode 409.</alternatif>
+        <alternatif kode="A2" pada-langkah="4">OTP salah atau kedaluwarsa: sistem menolak dan menawarkan kirim ulang, maksimal 5 kali per jam.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Akun pendaftar aktif.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC2" nama="Login lewat SSO">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <aktor-pendukung nama="Panitia PMB"/>
+      <aktor-pendukung nama="Bagian Keuangan"/>
+      <aktor-pendukung nama="BAAK"/>
+      <aktor-pendukung nama="Pimpinan"/>
+      <prakondisi>Pengguna memiliki akun.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Pengguna menekan tombol Masuk di pmb.unh.ac.id.</langkah>
+        <langkah no="2">Sistem mengarahkan pengguna ke halaman login sso.unh.ac.id.</langkah>
+        <langkah no="3">Pendaftar memasukkan email dan kata sandi atau memakai akun Google. Pegawai dan dosen memakai akun UNH ditambah OTP.</langkah>
+        <langkah no="4">Penyedia identitas (Keycloak) memeriksa identitas dan mengembalikan kode otorisasi.</langkah>
+        <langkah no="5">Web PMB menukar kode otorisasi dengan token.</langkah>
+        <langkah no="6">Pengguna masuk sesuai perannya.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Gagal login 5 kali: akun dikunci sementara.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Sesi aktif. Keluar dari satu aplikasi mengakhiri sesi di semua aplikasi.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC3" nama="Mengisi formulir dan memilih prodi">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <prakondisi>Calon sudah login dan ada periode serta gelombang yang dibuka.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Calon memilih jalur dan gelombang yang sedang dibuka.</langkah>
+        <langkah no="2">Calon mengisi biodata (NIK, nama, tempat dan tanggal lahir, alamat, NISN, sekolah asal).</langkah>
+        <langkah no="3">Calon memilih satu sampai dua program studi beserta urutannya.</langkah>
+        <langkah no="4">Calon mengonfirmasi pendaftaran.</langkah>
+        <langkah no="5">Sistem menerbitkan nomor pendaftaran dengan status menunggu_pembayaran.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="4">Data wajib kosong atau NIK tidak 16 digit: sistem menolak dengan kode 400 dan pesan kesalahan.</alternatif>
+        <alternatif kode="A2" pada-langkah="5">Biodata masih dapat diubah sebelum diverifikasi.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Pendaftaran tercatat dan memicu UC12.</pascakondisi>
+      <include ref="UC12"/>
+    </use-case>
+
+    <use-case id="UC4" nama="Mengunggah berkas persyaratan">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <prakondisi>Pembayaran sudah lunas sehingga fitur unggah berkas terbuka.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Calon memilih jenis berkas.</langkah>
+        <langkah no="2">Calon mengunggah berkas berformat PDF atau JPG maksimal 2 MB.</langkah>
+        <langkah no="3">Sistem menyimpan berkas dengan status menunggu.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="2">Format atau ukuran tidak sesuai: sistem menolak.</alternatif>
+        <alternatif kode="A2" pada-langkah="3">Berkas ditolak panitia: calon melihat catatan verifikator lalu mengunggah ulang.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Berkas tersimpan terenkripsi dan menunggu verifikasi (UC9).</pascakondisi>
+    </use-case>
+
+    <use-case id="UC5" nama="Membayar biaya pendaftaran via VA">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <aktor-pendukung nama="Bank Mitra"/>
+      <prakondisi>Pendaftaran terkonfirmasi dengan status menunggu_pembayaran.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Sistem meminta nomor Virtual Account ke bank dan menampilkannya (UC12).</langkah>
+        <langkah no="2">Calon membayar sesuai nominal melalui Virtual Account.</langkah>
+        <langkah no="3">Bank mengirim callback lunas ke sistem (UC13).</langkah>
+        <langkah no="4">Sistem mencatat lunas, membuka unggah berkas, dan mengirim notifikasi (UC11).</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="2">VA kedaluwarsa: status tagihan menjadi kedaluwarsa dan calon dapat meminta tagihan baru.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Status pembayaran lunas tanpa pengiriman bukti transfer.</pascakondisi>
+      <include ref="UC12"/>
+      <include ref="UC13"/>
+    </use-case>
+
+    <use-case id="UC6" nama="Mengikuti tes seleksi online">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <prakondisi>Pembayaran lunas. Jalur yang dipilih memakai tes online.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Calon membuka menu tes seleksi.</langkah>
+        <langkah no="2">Sistem menampilkan tes berbasis komputer.</langkah>
+        <langkah no="3">Calon mengerjakan tes.</langkah>
+        <langkah no="4">Sistem menyimpan hasil tes sebagai nilai tes.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="1">Pembayaran belum lunas: menu tes tidak tersedia.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Nilai tes tersimpan dan siap dinilai panitia (UC10).</pascakondisi>
+    </use-case>
+
+    <use-case id="UC7" nama="Melihat pengumuman kelulusan">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <prakondisi>Kelulusan sudah ditetapkan panitia (UC10).</prakondisi>
+      <alur-utama>
+        <langkah no="1">Calon login dan membuka menu pengumuman di dashboard.</langkah>
+        <langkah no="2">Sistem menampilkan hasil per pilihan prodi: lulus, tidak lulus, atau cadangan.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="1">Kelulusan belum ditetapkan: sistem menampilkan pesan hasil belum tersedia.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Calon hanya dapat melihat hasil miliknya sendiri.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC8" nama="Daftar ulang online dan bayar via VA">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <aktor-pendukung nama="BAAK"/>
+      <aktor-pendukung nama="Bank Mitra"/>
+      <aktor-pendukung nama="SIAKAD"/>
+      <prakondisi>Calon dinyatakan lulus.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Calon mengajukan daftar ulang.</langkah>
+        <langkah no="2">Sistem menerbitkan tagihan daftar ulang dengan nomor VA.</langkah>
+        <langkah no="3">Calon membayar melalui Virtual Account.</langkah>
+        <langkah no="4">Sistem memverifikasi pembayaran lunas (UC13).</langkah>
+        <langkah no="5">Sistem mengirim data ke SIAKAD dan menerima NIM (UC14).</langkah>
+        <langkah no="6">BAAK memvalidasi data mahasiswa baru (UC15).</langkah>
+        <langkah no="7">Sistem memindahkan akun pendaftar ke kelompok mahasiswa.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="5">SIAKAD tidak dapat dihubungi: data menunggu di antrean lalu dikirim ulang.</alternatif>
+        <alternatif kode="A2" pada-langkah="6">BAAK menolak data: status daftar ulang menjadi ditolak dan data diperbaiki.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Mahasiswa baru aktif di SIAKAD dan dapat login tanpa akun baru.</pascakondisi>
+      <include ref="UC13"/>
+      <include ref="UC14"/>
+    </use-case>
+
+    <use-case id="UC9" nama="Memverifikasi berkas persyaratan">
+      <aktor-utama nama="Panitia PMB"/>
+      <prakondisi>Pendaftar sudah lunas dan mengunggah berkas.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Panitia membuka daftar pendaftar yang sudah lunas.</langkah>
+        <langkah no="2">Panitia memeriksa setiap berkas.</langkah>
+        <langkah no="3">Panitia memilih diterima atau ditolak dan mengisi catatan bila ditolak.</langkah>
+        <langkah no="4">Sistem memperbarui status berkas dan mengirim notifikasi (UC11).</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Berkas ditolak: pendaftar menerima notifikasi untuk mengunggah ulang.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Status verifikasi berkas tercatat.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC10" nama="Menilai hasil dan menetapkan kelulusan">
+      <aktor-utama nama="Panitia PMB"/>
+      <prakondisi>Pendaftar sudah lunas dan berkas diterima.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Panitia mengisi nilai tes, rapor, atau wawancara per pilihan prodi.</langkah>
+        <langkah no="2">Panitia menetapkan status lulus, tidak lulus, atau cadangan.</langkah>
+        <langkah no="3">Sistem menampilkan pengumuman di dashboard pendaftar.</langkah>
+        <langkah no="4">Sistem mengirim notifikasi email dan WhatsApp (UC11).</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="2">Pendaftar belum membayar: sistem tidak mengizinkan penetapan lulus.</alternatif>
+        <alternatif kode="A2" pada-langkah="4">Notifikasi gagal terkirim: pesan tetap di antrean dan dicoba ulang.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Hasil seleksi tercatat dan diumumkan.</pascakondisi>
+      <include ref="UC11"/>
+    </use-case>
+
+    <use-case id="UC11" nama="Mengirim notifikasi status">
+      <aktor-utama nama="SIAKAD" catatan="dijalankan otomatis oleh sistem melalui gateway notifikasi"/>
+      <prakondisi>Terjadi perubahan status (lunas, berkas ditolak, pengumuman, atau daftar ulang).</prakondisi>
+      <alur-utama>
+        <langkah no="1">Sistem menyusun pesan dari templat sesuai status.</langkah>
+        <langkah no="2">Sistem memasukkan pesan ke antrean.</langkah>
+        <langkah no="3">Pesan dikirim lewat gateway email atau WhatsApp.</langkah>
+        <langkah no="4">Sistem mencatat kanal, isi, waktu kirim, dan status ke log notifikasi.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Pengiriman gagal: pesan tidak hilang dan dicoba ulang dari antrean.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Pendaftar menerima pesan dan log tersimpan.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC12" nama="Membuat tagihan dan nomor Virtual Account">
+      <aktor-utama nama="Bank Mitra"/>
+      <prakondisi>Pendaftaran atau daftar ulang terkonfirmasi.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Sistem meminta nomor VA ke bank melalui API Host-to-Host.</langkah>
+        <langkah no="2">Bank mengembalikan nomor VA.</langkah>
+        <langkah no="3">Sistem menyimpan tagihan (nomor VA, jenis, nominal, jatuh tempo, status belum).</langkah>
+        <langkah no="4">Sistem menampilkan nomor VA kepada calon.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="2" sumber="usulan">Bank tidak merespons: sistem menampilkan pesan kesalahan dan permintaan dapat diulang.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Tagihan tersimpan dengan status belum.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC13" nama="Memverifikasi pembayaran otomatis">
+      <aktor-utama nama="Bank Mitra"/>
+      <prakondisi>Tagihan berstatus belum dan calon sudah membayar.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Bank mengirim callback ke /callback/pembayaran berisi no_va, no_referensi, nominal_bayar, waktu_bayar, dan signature.</langkah>
+        <langkah no="2">Sistem memeriksa API key, daftar IP bank, dan signature HMAC.</langkah>
+        <langkah no="3">Sistem mencocokkan nomor VA dengan tagihan.</langkah>
+        <langkah no="4">Sistem mengubah status tagihan menjadi lunas dan mencatat pembayaran.</langkah>
+        <langkah no="5">Sistem mengirim notifikasi (UC11).</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="2">Signature atau API key tidak valid: callback ditolak dan dicatat.</alternatif>
+        <alternatif kode="A2" pada-langkah="3" sumber="usulan">Nominal tidak sesuai tagihan: pembayaran ditandai untuk ditinjau petugas keuangan.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Status bayar lunas tanpa pengecekan bukti manual.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC14" nama="Mengirim data dan menerbitkan NIM">
+      <aktor-utama nama="SIAKAD"/>
+      <prakondisi>Daftar ulang lunas.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Pekerja antrean mengirim data (no_pendaftaran, nik, nama_lengkap, tanggal_lahir, kode_prodi, angkatan) ke API SIAKAD.</langkah>
+        <langkah no="2">SIAKAD menerbitkan NIM dan mengembalikannya.</langkah>
+        <langkah no="3">Sistem menyimpan NIM dan mengubah status_sinkron_siakad menjadi berhasil.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="1">SIAKAD tidak dapat dihubungi: data menunggu di antrean Redis dan dikirim ulang.</alternatif>
+        <alternatif kode="A2" pada-langkah="1">Data ganda: SIAKAD menolak dengan kode 409.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Mahasiswa baru tercatat di SIAKAD dengan NIM.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC15" nama="Memvalidasi data mahasiswa baru">
+      <aktor-utama nama="BAAK"/>
+      <prakondisi>Data sudah terkirim ke SIAKAD dan NIM terbit.</prakondisi>
+      <alur-utama>
+        <langkah no="1">BAAK membuka daftar daftar ulang berstatus menunggu.</langkah>
+        <langkah no="2">BAAK memeriksa data mahasiswa baru dan NIM di SIAKAD.</langkah>
+        <langkah no="3">BAAK memilih valid atau ditolak.</langkah>
+        <langkah no="4">Sistem memindahkan akun pendaftar ke kelompok mahasiswa bila valid.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Data ditolak: status menjadi ditolak dan data diperbaiki.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Mahasiswa baru aktif di SIAKAD.</pascakondisi>
+    </use-case>
+
+    <use-case id="UC16" nama="Memantau dashboard rekap pendaftar">
+      <aktor-utama nama="Pimpinan"/>
+      <aktor-pendukung nama="Panitia PMB"/>
+      <prakondisi>Pengguna login dengan peran pimpinan atau panitia.</prakondisi>
+      <alur-utama>
+        <langkah no="1">Pengguna membuka dashboard.</langkah>
+        <langkah no="2">Pengguna memilih periode dan program studi.</langkah>
+        <langkah no="3">Sistem menampilkan jumlah pendaftar, lunas, lulus, dan daftar ulang per prodi, jalur, gelombang, dan sumber informasi.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Data kosong: sistem menampilkan rekap bernilai nol.</alternatif>
+      </alur-alternatif>
+      <pascakondisi>Pimpinan memperoleh capaian PMB tanpa rekap manual.</pascakondisi>
+    </use-case>
+  </skenario-use-case>
+
+  <!-- ===================== SKENARIO USE CASE AS-IS ===================== -->
+  <skenario-use-case proses="as-is">
+    <use-case id="ASIS1" nama="Mendaftar dan membayar">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <alur-utama>
+        <langkah no="1">Calon mendaftar dan mengisi formulir di portal pihak ketiga.</langkah>
+        <langkah no="2">Calon mentransfer biaya pendaftaran.</langkah>
+        <langkah no="3">Calon mengirim foto bukti transfer lewat WhatsApp.</langkah>
+      </alur-utama>
+      <masalah>Pendaftaran tersebar di beberapa alamat dan bukti dikirim di luar sistem.</masalah>
+    </use-case>
+    <use-case id="ASIS2" nama="Mencocokkan bukti pembayaran">
+      <aktor-utama nama="Bagian Keuangan"/>
+      <alur-utama>
+        <langkah no="1">Bagian Keuangan mencocokkan bukti dengan mutasi rekening secara manual.</langkah>
+        <langkah no="2">Jika cocok, pendaftar dilanjutkan ke seleksi.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="2">Tidak cocok: calon harus mengirim ulang bukti.</alternatif>
+      </alur-alternatif>
+      <masalah>Lambat, rawan salah, dan bergantung pada satu petugas.</masalah>
+    </use-case>
+    <use-case id="ASIS3" nama="Seleksi dan pengumuman">
+      <aktor-utama nama="Panitia PMB"/>
+      <aktor-pendukung nama="Calon Mahasiswa"/>
+      <alur-utama>
+        <langkah no="1">Panitia memeriksa berkas dan menyeleksi secara manual.</langkah>
+        <langkah no="2">Panitia mengumumkan hasil lewat media sosial.</langkah>
+        <langkah no="3">Calon melihat pengumuman di media sosial.</langkah>
+      </alur-utama>
+      <alur-alternatif>
+        <alternatif kode="A1" pada-langkah="3">Tidak lulus: calon tidak diterima.</alternatif>
+      </alur-alternatif>
+      <masalah>Pengumuman tidak personal dan status sulit dilacak.</masalah>
+    </use-case>
+    <use-case id="ASIS4" nama="Daftar ulang dan penerbitan NIM">
+      <aktor-utama nama="Calon Mahasiswa"/>
+      <aktor-pendukung nama="Bagian Keuangan"/>
+      <aktor-pendukung nama="BAAK"/>
+      <alur-utama>
+        <langkah no="1">Calon datang ke kampus untuk daftar ulang.</langkah>
+        <langkah no="2">Bagian Keuangan menerima pembayaran dan membuat kuitansi.</langkah>
+        <langkah no="3">BAAK menginput ulang data mahasiswa baru ke SIAKAD.</langkah>
+        <langkah no="4">BAAK menerbitkan NIM.</langkah>
+        <langkah no="5">BAAK merekap data PMB di spreadsheet untuk pimpinan.</langkah>
+      </alur-utama>
+      <masalah>Data diketik dua kali dan rekap untuk pimpinan dibuat manual.</masalah>
+    </use-case>
+  </skenario-use-case>
+
+  <!-- ===================== USER STORY DAN KRITERIA PENERIMAAN ===================== -->
+  <user-story-daftar>
+    <user-story id="US01" aktor="Calon Mahasiswa" use-case="UC1">
+      <sebagai>calon mahasiswa</sebagai><ingin>membuat akun dengan email</ingin><agar>dapat mendaftar</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">OTP dikirim ke email saat akun dibuat.</kriteria>
+        <kriteria no="2">Akun hanya aktif setelah OTP benar.</kriteria>
+        <kriteria no="3">Email yang sudah terdaftar ditolak.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US02" aktor="Calon Mahasiswa" use-case="UC2">
+      <sebagai>pengguna</sebagai><ingin>masuk satu kali</ingin><agar>tidak mengingat banyak kata sandi</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Pendaftar dapat masuk dengan email dan kata sandi atau akun Google.</kriteria>
+        <kriteria no="2">Pegawai dan dosen wajib memakai OTP.</kriteria>
+        <kriteria no="3">Akun terkunci sementara setelah 5 kali gagal login.</kriteria>
+        <kriteria no="4">Keluar dari satu aplikasi mengakhiri sesi di semua aplikasi.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US03" aktor="Calon Mahasiswa" use-case="UC3">
+      <sebagai>calon mahasiswa</sebagai><ingin>mengisi biodata dan memilih prodi</ingin><agar>pendaftaran saya tercatat</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Hanya jalur dan gelombang yang dibuka yang tampil.</kriteria>
+        <kriteria no="2">Pilihan prodi maksimal dua, dengan urutan.</kriteria>
+        <kriteria no="3">NIK harus 16 digit.</kriteria>
+        <kriteria no="4">Nomor pendaftaran terbit setelah konfirmasi.</kriteria>
+        <kriteria no="5">Biodata dapat diubah sebelum diverifikasi.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US04" aktor="Calon Mahasiswa" use-case="UC4" perangkat="ponsel">
+      <sebagai>calon mahasiswa</sebagai><ingin>mengunggah berkas dari ponsel</ingin><agar>tidak perlu datang ke kampus</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Format PDF atau JPG, maksimal 2 MB.</kriteria>
+        <kriteria no="2">Foto dapat diambil dari kamera atau galeri.</kriteria>
+        <kriteria no="3">Status menunggu, diterima, atau ditolak terlihat.</kriteria>
+        <kriteria no="4">Alasan penolakan terlihat.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US05" aktor="Calon Mahasiswa" use-case="UC5" perangkat="ponsel">
+      <sebagai>calon mahasiswa</sebagai><ingin>membayar lewat nomor Virtual Account</ingin><agar>tidak perlu mengirim bukti transfer</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Nomor VA tampil setelah konfirmasi dan dapat disalin dengan satu ketukan.</kriteria>
+        <kriteria no="2">Status berubah menjadi lunas otomatis setelah bank mengirim callback.</kriteria>
+        <kriteria no="3">VA kedaluwarsa menampilkan pilihan tagihan baru.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US06" aktor="Calon Mahasiswa" use-case="UC7">
+      <sebagai>calon mahasiswa</sebagai><ingin>melihat hasil seleksi di akun saya</ingin><agar>tidak mencari di media sosial</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Hasil muncul di dashboard pendaftar.</kriteria>
+        <kriteria no="2">Email dan WhatsApp terkirim dan statusnya tercatat.</kriteria>
+        <kriteria no="3">Hanya pemilik akun yang dapat melihat hasilnya.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US07" aktor="Calon Mahasiswa" use-case="UC8">
+      <sebagai>calon yang lulus</sebagai><ingin>daftar ulang secara daring</ingin><agar>tidak datang ke kampus</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Menu daftar ulang hanya tampil bagi yang lulus.</kriteria>
+        <kriteria no="2">Tagihan VA daftar ulang terbit otomatis.</kriteria>
+        <kriteria no="3">Pembayaran lunas tercatat tanpa bukti manual.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US08" aktor="Panitia PMB" use-case="UC9">
+      <sebagai>panitia</sebagai><ingin>memverifikasi berkas secara daring</ingin><agar>prosesnya cepat dan tercatat</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Daftar pendaftar yang sudah lunas tampil.</kriteria>
+        <kriteria no="2">Berkas dapat diterima atau ditolak dengan catatan.</kriteria>
+        <kriteria no="3">Perubahan status memicu notifikasi ke pendaftar.</kriteria>
+        <kriteria no="4">Hanya peran panitia yang dapat mengakses.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US09" aktor="Panitia PMB" use-case="UC10">
+      <sebagai>panitia</sebagai><ingin>memasukkan nilai dan menetapkan hasil</ingin><agar>pengumuman akurat</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Nilai tes, rapor, dan wawancara dimasukkan per pilihan prodi.</kriteria>
+        <kriteria no="2">Status berupa lulus, tidak lulus, atau cadangan.</kriteria>
+        <kriteria no="3">Pendaftar yang belum membayar tidak dapat ditetapkan lulus.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US10" aktor="Bagian Keuangan" use-case="UC13">
+      <sebagai>petugas keuangan</sebagai><ingin>melihat status tagihan dan pembayaran otomatis</ingin><agar>tidak mencocokkan bukti secara manual</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Tagihan berstatus belum, lunas, atau kedaluwarsa.</kriteria>
+        <kriteria no="2">Setiap pembayaran memuat nomor referensi dan waktu bayar.</kriteria>
+        <kriteria no="3">Rekap penerimaan dapat dicocokkan dengan mutasi bank.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US11" aktor="BAAK" use-case="UC15">
+      <sebagai>petugas BAAK</sebagai><ingin>data mahasiswa baru masuk ke SIAKAD otomatis</ingin><agar>tidak mengetik ulang</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Data terkirim ke SIAKAD setelah daftar ulang lunas.</kriteria>
+        <kriteria no="2">NIM kembali dan tampil di akun.</kriteria>
+        <kriteria no="3">BAAK dapat memvalidasi atau menolak data.</kriteria>
+        <kriteria no="4">Setelah valid, mahasiswa masuk ke SIAKAD tanpa membuat akun baru.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+    <user-story id="US12" aktor="Pimpinan" use-case="UC16">
+      <sebagai>pimpinan</sebagai><ingin>melihat capaian PMB</ingin><agar>dapat mengambil keputusan tanpa menunggu rekap manual</agar>
+      <kriteria-penerimaan>
+        <kriteria no="1">Rekap tersedia per prodi, jalur, gelombang, dan sumber informasi.</kriteria>
+        <kriteria no="2">Data dapat disaring per periode dan prodi.</kriteria>
+        <kriteria no="3">Hanya pimpinan dan panitia yang dapat membuka.</kriteria>
+      </kriteria-penerimaan>
+    </user-story>
+  </user-story-daftar>
+
+
+  <catatan>
+    <warna-logo-unh>Satu sumber ensiklopedia menyebut warna UNH adalah ungu, tanpa kode warna. Berkas logo resmi belum diperoleh dan perlu diminta ke LPTIK atau Humas.</warna-logo-unh>
+    <penggunaan-ponsel>Dokumen menyebut antarmuka web responsif mobile-first dan login yang mendukung web dan mobile. Proporsi pendaftar yang memakai ponsel belum ada datanya dan perlu diminta dari LPTIK atau vendor portal saat ini.</penggunaan-ponsel>
+    <skenario-uat-ponsel sumber="usulan">
+      <skenario no="1">Daftar dan unggah foto berkas dari kamera.</skenario>
+      <skenario no="2">Salin nomor VA lalu bayar.</skenario>
+      <skenario no="3">Terima notifikasi WhatsApp lalu buka dashboard.</skenario>
+      <skenario no="4">Login dengan akun Google.</skenario>
+    </skenario-uat-ponsel>
+  </catatan>
+
+</spesifikasi>

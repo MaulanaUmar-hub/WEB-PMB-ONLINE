@@ -43,7 +43,7 @@ Proses PMB di universitas mitra masih bergantung pada [formulir kertas / Google 
 | F-04 | Pengumuman hasil seleksi | P3 |
 | F-05 | Ekspor data pendaftar diterima | P4 |
 
-**Di luar lingkup MVP** (masuk Should/Could atau roadmap): multi-kampus penuh, payment gateway otomatis, notifikasi WhatsApp, ujian seleksi online, integrasi langsung ke SIAKAD. Detail ada di [backlog MoSCoW](../06_Governance/backlog-moscow.md).
+**Di luar lingkup MVP** (masuk Should/Could atau roadmap): multi-kampus penuh, payment gateway otomatis, notifikasi WhatsApp, ujian seleksi online, integrasi langsung ke SIAKAD. Detail ada di [backlog MoSCoW](../06_Governance/P13_Backlog_MoSCoW_DoD_Ketelusuran.pdf).
 
 ## 5. KPI
 
@@ -67,4 +67,4 @@ Lihat [stakeholder.md](stakeholder.md).
 
 ## 8. Rantai ketelusuran
 
-Masalah mitra (P1–P4) → kebutuhan (user story) → desain (BPMN, ERD, use case, topologi) → fitur F-01 s.d. F-05 → UAT + SUS. Lihat [matriks ketelusuran](../06_Governance/traceability-matrix.md).
+Masalah mitra (P1–P4) → kebutuhan (user story) → desain (BPMN, ERD, use case, topologi) → fitur F-01 s.d. F-05 → UAT + SUS. Lihat [matriks ketelusuran](../06_Governance/Traceability_Matrix_PMB_Online_UNH_v1.1.xlsx).

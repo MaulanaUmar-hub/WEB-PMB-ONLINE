@@ -57,7 +57,7 @@ Contoh: `docs(business): BPMN to-be alur verifikasi`, `feat(src): F-01 form pend
 
 1. Setiap dokumen diawali baris **"Disusun oleh: … · Direview oleh: … · versi · tanggal"**.
 2. Diagram (BPMN, ERD, topologi) disimpan dalam dua bentuk: **file sumber** (`.bpmn`, `.drawio`, `.mwb`, dsb.) dan **ekspor gambar** (`.png`/`.pdf`).
-3. Setiap artefak harus bisa ditelusuri di [matriks ketelusuran](docs/06_Governance/traceability-matrix.md).
+3. Setiap artefak harus bisa ditelusuri di [matriks ketelusuran](docs/06_Governance/Traceability_Matrix_PMB_Online_UNH_v1.1.xlsx).
 4. Keputusan teknologi dicatat sebagai ADR di `docs/06_Governance/adr/`.
 5. Permintaan baru dari mitra atau dosen masuk [log CR](docs/06_Governance/cr-log.md), bukan langsung dikerjakan.
 6. Jangan meng-commit data pribadi asli pendaftar. Pakai data dummy atau data yang sudah dianonimkan.
@@ -65,6 +65,6 @@ Contoh: `docs(business): BPMN to-be alur verifikasi`, `feat(src): F-01 form pend
 
 ## 5. Review pull request
 
-- Reviewer mengecek isi terhadap [Definition of Done](docs/06_Governance/definition-of-done.md).
+- Reviewer mengecek isi terhadap [Definition of Done](docs/06_Governance/P13_Backlog_MoSCoW_DoD_Ketelusuran.pdf).
 - PR dokumen boleh di-merge setelah 1 approval. PR kode butuh 1 approval dari anggota selain penulis.
 - Merge `dev → main` dilakukan CEO sebelum setiap gate (P13, P14, P15) dan sebelum Demo Day.

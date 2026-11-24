@@ -1,0 +1,92 @@
+/* ini untuk sementara doang yh, kalo gw jago vite tar gw lanjut*/
+.topbar{
+    height: 10%;
+    width: 100%;
+    background-color:white;
+    border-color: black;
+    position: fixed;
+    top: 0px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbarscfold{
+    height: 10%;
+    width: 100%;
+    background-color:antiquewhite;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.longassblock{
+    height: 3000px;
+    width: 20%;
+}
+
+.halfwidth{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+}
+
+.onethirdwidth{
+    width: calc(100% / 3);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+}
+
+.twothirdwidth{
+    width: calc(200% / 3);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;    
+    border: 1px solid black;
+}
+
+.landingpage{
+    height: 70%;
+    width: 100%;
+    background-color: grey;
+    align-items: center;
+    display: flex;    
+}
+
+.jalur{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    background-color: antiquewhite;
+}
+
+.jadwal{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    background-color: grey;
+}
+
+.contact{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    background-color: antiquewhite;
+}
+
+.footer{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    background-color: grey
+}
