@@ -9,7 +9,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('biodata', function (Blueprint $table) {
-            // PK sekaligus FK -> 1 pendaftaran = 1 biodata
             $table->unsignedBigInteger('idpendaftar')->primary();
             $table->string('nama');
             $table->char('nik', 16)->unique();

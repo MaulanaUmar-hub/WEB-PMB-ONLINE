@@ -1,5 +1,9 @@
-<div>
-mohon masukan nomor peserta <br>
-<input type="text">
-<a href="lulus"><button>Submit</button></a>
-</div>
+
+@include('partials.topbar')
+
+@foreach ($results as $r)
+    <br>
+    {{ $r->kelulusan }}
+@endforeach
+
+<a href="/">back</a>

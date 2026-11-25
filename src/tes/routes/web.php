@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CRUD_Pendaftaran;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,22 +14,13 @@ Route::get('/auth', function () {
     return view('auth');
 });
 
-Route::get('/seleksi', function () {
-    return view('seleksi');
-});
+
 
 Route::get('/daftarulang', function () {
     return view('daftarulang');
 });
 
-Route::get('/cek', function () {
-    return view('cek');
-});
+Route::get('/cek', [CRUD_Pendaftaran::class, 'cekkelulusan'])->name('kelulusan.cek');
 
-Route::get('/lulus', function () {
-    return view('lulus');
-});
-
-use App\Http\Controllers\CRUD_Pendaftaran;
-Route::get('/pendaftaran', [CRUD_Pendaftaran::class, 'create'])->name('pendaftaran.create');
-Route::post('/pendaftaran', [CRUD_Pendaftaran::class, 'store'])->name('pendaftaran.store');
+Route::get('/seleksi',  [CRUD_Pendaftaran::class, 'show'])->name('seleksi.show');
+Route::post('/seleksi', [CRUD_Pendaftaran::class, 'store'])->name('seleksi.store');

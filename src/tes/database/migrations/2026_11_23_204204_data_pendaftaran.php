@@ -13,16 +13,12 @@ return new class extends Migration
             $table->string('email');
             $table->string('jalur');
             $table->string('gelombang');
-            $table->string('status')->default('draft'); // draft, terkirim, terverifikasi
-
-            // diisi sebelum tes
+            $table->string('status')->default('draft'); 
             $table->string('pilihan1');
             $table->string('pilihan2')->nullable();
             $table->string('pilihan3')->nullable();
-
-            // diisi setelah tes
             $table->decimal('nilai', 5, 2)->nullable();
-            $table->string('kelulusan')->nullable(); // lulus, tidak lulus
+            $table->string('kelulusan')->nullable(); 
             $table->string('pilihan_diterima')->nullable();
 
             $table->timestamps();

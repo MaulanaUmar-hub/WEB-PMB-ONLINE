@@ -15,8 +15,10 @@ class DataPendaftar extends Model
     protected $fillable = [
         'email',
         'jalur',
+        'kelas',
         'gelombang',
         'status',
+        'sumber_info',
         'pilihan1',
         'pilihan2',
         'pilihan3',

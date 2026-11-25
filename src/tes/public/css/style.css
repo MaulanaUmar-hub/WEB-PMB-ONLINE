@@ -1,92 +1,272 @@
-/* ini untuk sementara doang yh, kalo gw jago vite tar gw lanjut*/
-.topbar{
-    height: 10%;
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding-top: 64px; /* tinggi topbar fixed */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #111;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, p { color: #111; margin: 0; }
+h2 { font-size: 1.6rem; }
+a { color: inherit; text-decoration: none; }
+
+.container {
     width: 100%;
-    background-color:white;
-    border-color: black;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== Helpers (dari punyamu) ===== */
+.flex    { display: flex; }
+.Xcenter { align-items: center; }
+.Ycenter { justify-content: center; }
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: .85rem;
+    border: 1px solid #111;
+    cursor: pointer;
+    background: transparent;
+}
+.btn-solid   { background: #111; color: #fff; }
+.btn-dark    { background: #333; color: #fff; border-color: #333; }
+.btn-outline:hover { background: #111; color: #fff; }
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+
+/* ===== Topbar ===== */
+.topbar {
     position: fixed;
-    top: 0px;
-    border: solid 1px black;
+    top: 0; left: 0;
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+}
+.topbar-inner {
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 24px;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-text strong { font-size: .8rem; }
+.brand-text small  { font-size: .7rem; color: #555; }
+.logo-circle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: #ccc;
+    display: grid; place-items: center;
+    font-size: .55rem;
+}
+.nav { display: flex; gap: 24px; font-size: .85rem; }
+.nav a:hover { text-decoration: underline; }
+.topbar-actions { display: flex; gap: 8px; }
+
+/* ===== Section dasar ===== */
+section { padding: 72px 0; }
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     align-items: center;
 }
 
-.topbarscfold{
-    height: 10%;
-    width: 100%;
-    background-color:antiquewhite;
+/* ===== Hero ===== */
+.landingpage { background: #aaa; }
+.hero-text h1 { font-size: 2.2rem; line-height: 1.15; margin: 16px 0; }
+.hero-text p  { max-width: 480px; }
+.badge {
+    display: inline-block;
+    font-size: .75rem;
+    padding: 4px 10px;
+    border: 1px solid #555;
+    background: black;
+    border-radius: 4px;
+}
+.gambar {
+    height: 300px;
+    background: #ddd;
+    border: 1px solid #888;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
 }
 
-body{
-    padding: 0px;
-    margin: 0px;
-}
-
-.longassblock{
-    height: 3000px;
-    width: 20%;
-}
-
-.halfwidth{
-    width: 50%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+/* ===== Cards umum ===== */
+.card {
+    background: #bbb;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 16px;
     display: flex;
-    border: 1px solid black;
+    flex-direction: column;
+    gap: 6px;
+}
+.card-no   { font-size: .8rem; color: #444; }
+.card small { color: #444; }
+.cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cards-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+
+/* ===== Jalur ===== */
+.jalur { background: #ddd; }
+.jalur-grid { align-items: start; grid-template-columns: 1fr 2fr; }
+.jalur-intro { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.jalur-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.jalur-cards .span-2 { grid-column: span 1; } /* di wireframe kartu 05 berdiri sendiri di kiri */
+
+/* ===== Jadwal ===== */
+.jadwal { background: #aaa; }
+.jadwal h2, .prodi h2 { margin-bottom: 24px; }
+.jadwal .card { background: #eee; }
+.card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tag {
+    font-size: .65rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #ccc;
+    white-space: nowrap;
+}
+.tag-active { background: #111; color: #fff; }
+
+/* ===== Program studi ===== */
+.prodi { background: #ddd; }
+.prodi .card { min-height: 90px; }
+
+/* ===== Footer ===== */
+.footer { background: #eee; padding: 48px 0 0; border-top: 1px solid #ccc; }
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+}
+.footer-about p { margin: 12px 0; font-size: .8rem; }
+.footer h4 { margin-bottom: 8px; font-size: .8rem; letter-spacing: 1px; }
+.footer p  { font-size: .8rem; }
+.socials { display: flex; gap: 8px; }
+.social {
+    width: 28px; height: 28px;
+    background: #111; color: #fff;
+    border-radius: 6px;
+    display: grid; place-items: center;
+    font-size: .65rem;
+}
+.copyright {
+    text-align: center;
+    padding: 14px;
+    font-size: .75rem;
+    background: #bbb;
 }
 
-.onethirdwidth{
-    width: calc(100% / 3);
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border: 1px solid black;
+/* ===== Chat FAB ===== */
+.chat-fab {
+    position: fixed;
+    right: 20px; bottom: 20px;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: #111; color: #fff;
+    display: grid; place-items: center;
+    font-size: 1.2rem;
+    z-index: 100;
 }
 
-.twothirdwidth{
-    width: calc(200% / 3);
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;    
-    border: 1px solid black;
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .nav { display: none; }
+    .two-col, .jalur-grid { grid-template-columns: 1fr; }
+    .cards-3 { grid-template-columns: 1fr; }
+    .cards-5 { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { grid-template-columns: 1fr; }
 }
 
-.landingpage{
-    height: 70%;
+
+/* Halaman formulir pendaftaran (seleksi) */
+.form-page {
+    background: #ddd;
+    min-height: calc(100vh - 64px);
+    padding: 40px 0 72px;
+}
+
+.container-narrow {
     width: 100%;
-    background-color: grey;
-    align-items: center;
-    display: flex;    
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-.jalur{
-    height: 70%;
-    width: 100%;
-    display: flex;
-    background-color: antiquewhite;
-}
+.form-title { font-size: 1.8rem; }
+.title-line { width: 40px; height: 3px; background: #111; margin: 8px 0 12px; }
+.form-sub   { font-size: .8rem; color: #444; margin-bottom: 20px; }
 
-.jadwal{
-    height: 40%;
-    width: 100%;
-    display: flex;
-    background-color: grey;
-}
+/* Alert */
+.alert { padding: 10px 14px; border-radius: 4px; font-size: .85rem; margin-bottom: 16px; }
+.alert-success { background: #cfe8cf; border: 1px solid #8bb98b; }
+.alert-error   { background: #f1cccc; border: 1px solid #c58585; }
 
-.contact{
-    height: 60%;
-    width: 100%;
-    display: flex;
-    background-color: antiquewhite;
+/* Stepper */
+.stepper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; }
+.step {
+    padding: 10px 14px;
+    background: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: .8rem;
+    color: #555;
 }
+.step span { margin-right: 6px; font-weight: 600; }
+.step.active { background: #555; border-color: #555; color: #fff; }
 
-.footer{
-    height: 15%;
+/* Panel */
+.panel {
+    background: #aaa;
+    border: 1px solid #999;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+.panel h2 { font-size: 1.1rem; margin-bottom: 16px; }
+
+/* Field */
+.field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+.field label { font-size: .75rem; font-weight: 600; }
+.field input,
+.field select,
+.field textarea {
     width: 100%;
-    display: flex;
-    background-color: grey
+    padding: 9px 12px;
+    font: inherit;
+    font-size: .85rem;
+    background: #e4e4e4;
+    border: 1px solid #999;
+    border-radius: 4px;
+    color: #111;
+}
+.field textarea { resize: vertical; }
+.field input:focus,
+.field select:focus,
+.field textarea:focus { outline: 2px solid #333; outline-offset: 0; }
+.field .invalid { border-color: #b00020; background: #f6e3e3; }
+.hint { font-size: .7rem; color: #444; }
+.err  { font-size: .7rem; color: #b00020; font-weight: 600; }
+
+/* Tombol bawah */
+.form-actions { display: flex; justify-content: flex-end; gap: 12px; }
+.btn-grey { background: #999; color: #111; border-color: #888; }
+.btn-grey:hover { background: #888; }
+.btn-dark:hover { background: #111; }
+
+@media (max-width: 600px) {
+    .stepper { grid-template-columns: 1fr; }
+    .form-actions { flex-direction: column; }
+    .form-actions .btn { width: 100%; text-align: center; }
 }
