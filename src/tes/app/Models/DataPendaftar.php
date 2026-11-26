@@ -15,7 +15,7 @@ class DataPendaftar extends Model
     protected $fillable = [
         'email',
         'jalur',
-        'kelas',
+        'kelas_id',
         'gelombang',
         'status',
         'sumber_info',
@@ -34,6 +34,11 @@ class DataPendaftar extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'email', 'email');
+    }
+
+    public function kelas(): BelongsTo
+    {
+        return $this->belongsTo(Kelas::class, 'kelas_id', 'id');
     }
 
     public function biodata(): HasOne

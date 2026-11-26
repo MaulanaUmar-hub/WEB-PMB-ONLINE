@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Biodata;
 use App\Models\DataPendaftar;
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -18,8 +19,6 @@ class CRUD_Pendaftaran extends Controller
         'Beasiswa KIP',
         'Beasiswa SMA Plus & SMK Binaan Yayasan',
     ];
-
-    private const KELAS = ['Kelas pagi', 'Kelas malam'];
 
     // value => label. Sesuaikan value dengan tipe kolom `gender` di database
     // (cek: DESCRIBE biodata;). Kalau enum('Laki-laki','Perempuan'), ganti key-nya.
@@ -75,7 +74,7 @@ class CRUD_Pendaftaran extends Controller
             'pendaftar'  => $pendaftar,
             'biodata'    => $pendaftar?->biodata,
             'jalurList'  => self::JALUR,
-            'kelasList'  => self::KELAS,
+            'kelasList'  => Kelas::aktif()->orderBy('id')->get(),
             'genderList' => self::GENDER,
             'sumberList' => self::SUMBER,
             'gelombang'  => $this->gelombang(),
@@ -98,7 +97,7 @@ class CRUD_Pendaftaran extends Controller
         $data = $request->validate([
             // Jalur dan kelas
             'jalur'         => ['required', Rule::in(self::JALUR)],
-            'kelas'         => ['required', Rule::in(self::KELAS)],
+            'kelas_id'      => ['required', Rule::exists('kelas', 'id')->where('aktif', true)],
             'gelombang'     => ['required', Rule::in($gelombangDibuka)],
 
             // Data diri
@@ -139,7 +138,7 @@ class CRUD_Pendaftaran extends Controller
                 ['email' => Auth::user()->email, 'status' => 'draft'],
                 [
                     'jalur'       => $data['jalur'],
-                    'kelas'       => $data['kelas'],
+                    'kelas_id'    => $data['kelas_id'],
                     'gelombang'   => $data['gelombang'],
                     'sumber_info' => $data['sumber_info'] ?? null,
                 ]

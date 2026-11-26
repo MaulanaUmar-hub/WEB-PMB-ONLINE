@@ -46,13 +46,15 @@
                 </div>
 
                 <div class="field">
-                    <label for="kelas">Kelas *</label>
-                    <select id="kelas" name="kelas" class="@error('kelas') invalid @enderror">
+                    <label for="kelas_id">Kelas *</label>
+                    <select id="kelas_id" name="kelas_id" class="@error('kelas_id') invalid @enderror">
                         @foreach ($kelasList as $k)
-                            <option value="{{ $k }}" @selected(old('kelas', $pendaftar->kelas ?? '') === $k)>{{ $k }}</option>
+                            <option value="{{ $k->id }}" @selected((string) old('kelas_id', $pendaftar->kelas_id ?? '') === (string) $k->id)>
+                                {{ $k->nama }}{{ $k->keterangan ? ' (' . $k->keterangan . ')' : '' }}
+                            </option>
                         @endforeach
                     </select>
-                    @error('kelas') <small class="err">{{ $message }}</small> @enderror
+                    @error('kelas_id') <small class="err">{{ $message }}</small> @enderror
                 </div>
 
                 <div class="field">
